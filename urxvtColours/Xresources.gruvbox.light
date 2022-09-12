@@ -1,0 +1,71 @@
+!! Colourscheme
+
+! special
+*.foreground: #3c3836
+*.background: #fbf1c7
+*.cursorColor: #928374
+
+! black
+*.color0: #fdf4c1
+*.color8: #cc241d
+
+! red
+*.color1: #98971a
+*.color9: #d79921
+
+! green
+*.color2: #458588
+*.color10: #b16286
+
+! yellow
+*.color3: #689d6a
+*.color11: #7c6f64
+
+! blue
+*.color4: #928374
+*.color12: #9d0006
+
+! magenta
+*.color5: #79740e
+*.color13: #b57614
+
+! cyan
+*.color6: #076678
+*.color14: #8f3f71
+
+! white
+*.color7: #427b58
+*.color15: #3c3836
+
+
+!! URxvt Appearance
+URxvt.font:		xft:Ubuntu Mono:style=Regular:size=12
+URxvt.boldFont:		xft:Ubuntu Mono:style=Bold:size=12
+URxvt.italicFont:	xft:Ubuntu Mono:style=Italic:size=12
+URxvt.boldItalicfont:	xft:Ubuntu Mono:style=Bold Italic:size=12
+URxvt.letterSpace:	0
+URxvt.lineSpace:	0
+URxvt.geometry:		100x50
+URxvt.internalBorder:	24
+URxvt.cursorBlink:	true
+URxvt.cursorUnderline:	false
+URxvt.saveline:		2048
+URxvt.scrollBar:	false
+URxvt.scrollBar_right:	false
+URxvt.urgentOnBell:	true
+URxvt.depth:		24
+URxvt.iso14755:		false
+
+!! URxvt perl extensions
+URxvt.perl-ext-common:		default,clipboard,url-select,keyboard-select
+URxvt.copyCommand:		xclip -i -selection clipboard
+URxvt.pasteCommand:		xclip -o -selection clipboard
+URxvt.keysym.C-c:		perl:clipboard:copy
+URxvt.keysym.C-v:		perl:clipboard:paste
+URxvt.keysym.C-M-v:		perl:clipboard:paste_escaped
+URxvt.keysym.C-Escape:		perl:keyboard-select:activate
+URxvt.keysym.C-s:		perl:keyboard-select:search
+URxvt.keysym.C-u:		perl:url-select:select_next
+URxvt.url-select.launcher:	google-chrome-stable
+URxvt.url-select.underline:	true
+

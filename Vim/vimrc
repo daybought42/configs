@@ -1,0 +1,12 @@
+syntax on
+set columns=104 lines=46
+set textwidth=79
+set colorcolumn=79
+set number
+set tabstop=4
+set softtabstop=4
+set expandtab
+set showcmd
+set showmatch
+set incsearch
+set wildmenu

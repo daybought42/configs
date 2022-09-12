@@ -1,0 +1,11 @@
+xterm*geometry:		80x53+50+50
+xterm*faceName:		Ubuntu Mono
+xterm*faceSize:		12
+xterm*background:	#2b2b2b
+xterm*foreground:	#e7e7e7
+
+xterm*loginShell:	true
+
+xterm*saveLines:	1000000
+
+xterm*charClass:	33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
