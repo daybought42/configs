@@ -189,9 +189,9 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 --
 
 mySpacing = spacingRaw  False                   -- False = Apply even when single window
-                        (Border 15 25 15 15)    -- Screen border size top bot right left
+                        (Border 10 20 10 10)    -- Screen border size top bot right left
                         True                    -- Enable screen border
-                        (Border 15 25 15 15)    -- Window border size
+                        (Border 10 20 10 10)    -- Window border size
                         True                    -- Enable window borders
 
 myLayout = mySpacing $ avoidStruts tiled ||| Mirror tiled ||| Full
