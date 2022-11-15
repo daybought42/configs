@@ -20,7 +20,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "urxvt"
+myTerminal      = "xfce4-terminal"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -69,7 +69,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_p     ), spawn "dmenu_run")
 
     -- launch browser
-    , ((modm .|. shiftMask, xK_b     ), spawn "google-chrome-stable")
+    , ((modm .|. shiftMask, xK_b     ), spawn "brave-browser")
  
     -- launch file manager
     , ((modm .|. shiftMask, xK_f     ), spawn "thunar")
