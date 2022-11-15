@@ -25,6 +25,6 @@ Config {
                                                         , "--low"      , "darkred"
                                                         ] 10
                                   , Run Date            "%a %d %b %Y <fc=#c1c1c1>%H:%M:%S</fc> %Z" "date" 10 
-                                  , Run Com             "/home/wayne/ip.sh" ["&"] "ip" 50 
+                                  , Run Com             "/usr/bin/hostname" ["-I"] "ip" 50 
                                   ]
 }
