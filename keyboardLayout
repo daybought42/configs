@@ -1,0 +1,3 @@
+sudo localectl set-x11-keymap --no-convert gb pc105
+
+sudo localectl set-x11-keymap --no-convert se pc105
