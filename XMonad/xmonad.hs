@@ -54,8 +54,8 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
-myNormalBorderColor  = "#141c21"
-myFocusedBorderColor = "#696ebf"
+myNormalBorderColor  = "#141C21"
+myFocusedBorderColor = "#696EBF"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -189,9 +189,9 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 --
 
 mySpacing = spacingRaw  False                   -- False = Apply even when single window
-                        (Border 10 20 10 10)    -- Screen border size top bot right left
+                        (Border 7 14 7 7)    -- Screen border size top bot right left
                         True                    -- Enable screen border
-                        (Border 10 20 10 10)    -- Window border size
+                        (Border 7 14 7 7)    -- Window border size
                         True                    -- Enable window borders
 
 myLayout = mySpacing $ avoidStruts tiled ||| Mirror tiled ||| Full
