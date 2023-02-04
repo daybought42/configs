@@ -1,0 +1,52 @@
+Config { font = "Ubuntu 12"
+       , additionalFonts = ["DejaVu Sans Mono italic 10", "Hack 10"] 
+       , bgColor = "#282828"
+       , fgColor = "#838383"
+       , position = Bottom
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , iconRoot = "."
+       , allDesktops = True
+       , overrideRedirect = True
+       , textOutputFormat = Ansi
+       , commands = [ Run Weather "EGMD" ["-t", "<station> -\
+         \ Wind: <fc=#00a0e0><windAzimuth></fc>° <fc=#00a0e0><windKnots></fc>kt -\
+         \ Temp: <fc=#00a0e0><tempC></fc>°C <fc=#00a0e0><dewPointC></fc>°C -\
+         \ RH: <fc=#00a0e0><rh></fc>% -\
+         \ Px: <fc=#00a0e0><pressure></fc>hPa -\
+         \ Sky: <fc=#00a0e0><skyCondition></fc>"
+                                         ] 9000
+                    , Run Memory ["-t","Mem: <usedratio>%"
+                                 ,"--Low"       , "20"  -- units: %
+                                 ,"--High"      , "90"  -- units: %
+                                 ,"--low"       , "darkgreen"
+                                 ,"--normal"    , "darkorange"
+                                 ,"--high"      , "darkred"
+                                 ] 10
+
+                    , Run DynNetwork [ "-t", "<fc=#00a0e0><dev></fc>: up <tx>kB/s dn <rx>kB/s"
+                                     , "--Low"      , "8000"    -- units: B/s
+                                     , "--High"     , "1500000" -- units: B/s
+                                     , "--high"     , "darkgreen"
+                                     , "--normal"   , "darkorange"
+                                     , "--low"      , "darkred"
+                                     ] 10
+
+                    , Run Date "%a %b %d %Y <fc=#c1c1c1>%H:%M:%S</fc>" "date" 10
+                    
+                    , Run Com "/usr/bin/hostname" ["-I"] "inip" 50
+                    , Run Com "/usr/bin/curl" ["icanhazip.com"] "exip" 50
+                    ]
+
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %memory% -\
+                    \ IF: %dynnetwork% -\
+                    \ IP: <fc=#00a0e0>%inip% %exip%</fc> \
+                    \ } %date% \
+                    \ { %EGMD% "
+       }
