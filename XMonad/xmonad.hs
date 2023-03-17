@@ -20,7 +20,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "xfce4-terminal"
+myTerminal      = "sakura"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -265,7 +265,7 @@ myStartupHook = return ()
 --
 main = do
 	xmproc <- spawnPipe "~/.fehbg"
-	xmproc <- spawnPipe "/usr/bin/xmobar /home/wayne/.xmobarrc"
+	xmproc <- spawnPipe "/usr/bin/xmobar /home/wayne/.config/xmobar/xmobarrc"
 	xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding
