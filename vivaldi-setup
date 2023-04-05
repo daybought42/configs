@@ -1,0 +1,14 @@
+Debian Setup
+#! /bin/bash
+
+sudo apt install software-properties-common apt-transport-https wget ca-certificates -y
+
+sudo wget -O- https://repo.vivaldi.com/archive/linux_signing_key.pub | gpg --dearmor | sudo tee /usr/share/keyrings/vivaldi.gpg
+
+echo deb [arch=amd64 signed-by=/usr/share/keyrings/vivaldi.gpg] https://repo.vivaldi.com/archive/deb/ stable main | sudo tee /etc/apt/sources.list.d/vivaldi.list
+
+sudo apt update
+
+sudo apt install vivaldi-stable -y
+
+echo Done!
